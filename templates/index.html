@@ -1,0 +1,36 @@
+<!--- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/main.css">
+    <title>PY Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CALCULATOR</h1> --->
+      {% extends "base.html" %}
+      {% block content %}
+      <h3>Enter the values and operation in the field to get result</h3>
+      <div class="inputs">
+        <form class="calc" action="{{url_for('result')}}" method="POST">
+        <label for="value1"> First Operand</label>
+        <input type="number" name="value1"  placeholder="Enter the first No." required>
+          <br>
+        <label for="value2">Second Operand</label>
+        <input type="number" name="value2"  placeholder="Enter the Second No."  required>
+          <br>
+        <label for="operation">Operator</label>
+        <input type="text" name="operation"  placeholder="+,-,*,/,%(modulus),^" required>
+          <br>
+        <button type="submit" name="Result" >RESULT</button>
+      </form>
+      </div>
+      {% endblock %}
+
+  <!---
+</div>
+
+
+  </body>
+</html>
+--->
